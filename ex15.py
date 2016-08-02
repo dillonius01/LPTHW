@@ -1,23 +1,25 @@
-from sys import argv #import argument module
+#import argv module
+from sys import argv
 
-script, filename = argv #defining argument variable
+#assigning the variables used in argv
+script, filename = argv
 
-txt = open(filename) #turns a file into a file object (txt) so that it can be opened
+#defines txt, by using the open function
+txt = open(filename)
 
-print "Here's your file %r:" % filename #prints filename as defined earlier
-print txt.read() #tells computer to read txt with no parameters
+#prints filename 
+print "Here's your file %r:" % filename
+#prints txt by asking to read the open filename 
+print txt.read()
 
 txt.close()
 
-print "Closed or not?" , txt.closed #prints False if open and True if closed
-
+#prints a prompt
 print "Type the filename again:"
-file_again = raw_input("> ") #defines file_again as what user types
+#defines file_again via raw input 
+file_again = raw_input("> ")
 
-txt_again = open(file_again) #opens file_again
+#opens the file_again and defines that as txt_again 
+txt_again = open (file_again)
 
-print txt_again.read() #reads and prints txt with no parameters
-
-txt_again.close()
-
-## when running python in shell, need to do open("ex15.py")
+print txt_again.read()
